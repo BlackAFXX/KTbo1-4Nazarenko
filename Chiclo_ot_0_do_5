@@ -1,0 +1,33 @@
+// Вводим число от 0 до 5, если попали ввести на основании числа в кол-ве n и найти их сумму, иначе повторить ввод. 
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n, b, k, i;
+	bool a;
+	a = false;
+	k = 0;
+	do
+	{
+		cin >> n;
+		if ((n > 5) or (n < 0))
+			cout << "Ошибка. Введите число\n";
+		else
+		{
+			cout << "Введите кол-во чисел = " << n<<"\n";
+			a = true;
+			i = 0;
+			for (i; n>i;)
+			{
+				cin >> b;
+				k = k + b;
+				i = i + 1;
+			}
+			cout << "Сумма = " << k;
+		}
+	} while (a != true);
+}
