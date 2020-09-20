@@ -1,0 +1,17 @@
+// Kirpich.cpp
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int x, y, z, u, v;
+    cout << "Введите x,y,z,u,v\n";
+    cin >> x >> y >> z >> u >> v;
+    if (((x <= u) && (y <= v)) or ((y <= u) && (x <= v)) or ((y <= u) && (z <= v)) or ((z <= u) && (y <= v)) or ((x <= u) && (z <= v)) or ((z <= u) && (x <= v)))
+        cout << "Кирпич вошел";
+    else
+        cout << "Кирпич не вошел";
+}
